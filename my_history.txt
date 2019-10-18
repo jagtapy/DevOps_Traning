@@ -1,0 +1,186 @@
+    1  sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    2  .repo
+    3  docker --version
+    4  sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    5  sudo yum install -y docker-ce docker-ce-cli containerd.io
+    6  docker --version
+    7  docker ps
+    8  sudo systemctl start docker
+    9  docker ps
+   10  sudo chown centos:users /var/run/docker.sock
+   11  docker ps
+   12  sudo docker run hello-world
+   13  docker service ps demo
+   14  cat /etc/redhat-release
+   15  docker run -i -t centos:latest /bin/bash
+   16  rpm -qa | wc -l
+   17  ps -ef | wc -l
+   18  docker run -i -t centos:latest /bin/bash
+   19  docker run -i -t centos:7 /bin/bash
+   20  docker run -i -t centos:8 /bin/bash
+   21  docker run -i -t centos:latest /bin/bash
+   22  docker run ubantu:latest cat /etc/redhat-release
+   23  sudo docker run ubantu:latest cat /etc/redhat-release
+   24  sudo chown centos:users /var/run/docker.sock
+   25   docker run ubantu:latest cat /etc/redhat-release
+   26   docker run ubuntu:latest cat /etc/redhat-release
+   27   docker run ubuntu:latest ls /etc/
+   28   docker run ubuntu:latest cat /etc/lsb-release
+   29  docker ps -a
+   30  docker logs 0a242c735b1a
+   31  docker run -d jpetazzo/clock
+   32  docker ps -a
+   33  docker ps 
+   34  docker logs 8643a99ea0af
+   35  docker run -d --name yog jpetazzo/clock
+   36  docker ps 
+   37  docker ps -l
+   38  docker ps -qa
+   39  docker container proove
+   40  docker ps -a
+   41  docker container prune
+   42  docker ps -a
+   43  docker system df
+   44  docker container stop 8643a99ea0af
+   45  docker ps -a
+   46  docker ps
+   47  docker system df
+   48  docker images
+   49  docker rmi 67fa590cfc1c
+   50  docker images
+   51  docker run -itd centos:latest --name yog-demo /bin/bash
+   52  docker ps
+   53  docker run -itd centos:latest --name kul-demo-1 /bin/bash
+   54  docker run -itd centos:latest --name yog-demo /bin/bash
+   55  docker ps -a
+   56  docker exec -it 3f1abfdf74f1 /bin/bash
+   57  docker container prune
+   58  docker ps -a
+   59  docker images
+   60  docker push centos:8
+   61  docker tag centos:8 yogesh
+   62  docker images
+   63  docker history yogesh
+   64  docker run -itd  --name yog-demo centos:latest /bin/bash
+   65  docker exec -it yog-demo /bin/bash
+   66  docker images
+   67  docker ps -a
+   68  docker system df
+   69  docker commit -a "test" -m "commiting git" centos:latest
+   70  docker commit -a "test" -m "commiting git" yog-demo centos:latest
+   71  docker history centos
+   72  docker tag yog-demo jagtapy1/yog-demo
+   73  docker tag centos:latest jagtapy1/centos:latest
+   74  docker push jagtapy1/centos:latest
+   75  docker images
+   76  docker login
+   77  docker push jagtapy1/centos:latest
+   78  history | tail 20
+   79  history | tail -20
+   80  docker run -d tomcat
+   81  docker ps
+   82  docker rm tomcat
+   83  docker rm 7c9fbe711fb0
+   84  docker kill 7c9fbe711fb0
+   85  docker ps
+   86  docker run -d -p 8080:8080 tomcat
+   87  docker ps
+   88  docker kill 93cfa3c2f431
+   89  docker rm tomcat
+   90  docker rm flamboyant_cerf
+   91  docker run -d -p 8080:8080 tomcat
+   92  vi Dockerfile
+   93  docker run -d --name tomcat -p 8080:8080 tomcat
+   94  docker ps -a
+   95  ls -lrt
+   96  ansible-playbook createuser 
+   97  vi installGit
+   98  cat createuser 
+   99  vi installGit
+  100  vi installGit.yml
+  101  ansible-playbook installGit.yml 
+  102  cat installGit.yml 
+  103  vi installGit.yml
+  104  ansible-playbook installGit.yml 
+  105  vi installGit.yml
+  106  ansible-playbook installGit.yml 
+  107  vi installGit.yml
+  108  ansible-playbook installGit.yml 
+  109  vi installGit.yml
+  110  ansible-playbook installGit.yml 
+  111  ansible-playbook installGit.yml --syntax--check
+  112  ansible-playbook installGit.yml --syntax-check
+  113  vi installGit.yml
+  114  ansible-playbook installGit.yml --syntax-check
+  115  vi installGit.yml
+  116  ansible-playbook installGit.yml --syntax-check
+  117  cat installGit.yml 
+  118  vi installGit.yml
+  119  ansible-playbook installGit.yml --syntax-check
+  120  vi installGit.yml
+  121  ansible-playbook installGit.yml --syntax-check
+  122  ansible-playbook installGit.yml --check
+  123  ansible-playbook installGit.yml
+  124  vi installGit.yml
+  125  git --version
+  126  vi installGit.yml
+  127  maven --version
+  128  ansible-playbook installGit.yml --check
+  129  ansible-playbook installGit.yml
+  130  maven --version
+  131  vi installGit.yml
+  132  mvn --version
+  133  vi installGit.yml
+  134  ansible-playbook installGit.yml
+  135  vi installGit.yml
+  136* 
+  137  ansible-playbook installGit.yml --syntax-check
+  138  vi installGit.yml
+  139  cat installdocker.yml
+  140  vi installdocker.yml
+  141  ansible-playbook installGit.yml --syntax-check
+  142  ansible installdocker.yml --syntax-check
+  143  ansible-playbook installdocker.yml --syntax-check
+  144  vi installdocker.yml
+  145  ansible-playbook installdocker.yml --syntax-check
+  146  vi installdocker.yml
+  147  ansible-playbook installdocker.yml --syntax-check
+  148  vi installdocker.yml
+  149  ansible-playbook installdocker.yml --syntax-check
+  150  vi installdocker.yml
+  151  ansible-playbook installdocker.yml --syntax-check
+  152  ansible-playbook installdocker.yml --check
+  153  vi installdocker.yml
+  154  ansible-playbook installdocker.yml --check
+  155  vi installdocker.yml
+  156  ansible-playbook installdocker.yml --check
+  157  vi installdocker.yml
+  158  ansible-playbook installdocker.yml --check
+  159  ansible-playbook installdocker.yml
+  160  vi installdocker.yml
+  161  ansible-playbook installdocker.yml --extra-vars "group=sync"
+  162  vi installdocker.yml
+  163  ansible-playbook installdocker.yml --extra-vars "group=sync"
+  164  vi installdocker.yml
+  165  git --version
+  166  git push installdocker.yml https://github.com/jagtapy/DevOps_Traning.git
+  167  git branch
+  168  pwd
+  169  mkddir DevOps_Traning
+  170  mkdir DevOps_Traning
+  171  ls -art
+  172  ls -artl
+  173  cp createuser installGit.yml installdocker.yml /home/centos/DevOps_Traning
+  174  cd /home/centos/DevOps_Traning
+  175  ls -lrt
+  176  git init
+  177  ls -lart
+  178  git add .
+  179  git commit
+  180  git commit -am "adding new files"
+  181  git push https://github.com/jagtapy/DevOps_Traning.git master
+  182  git pull https://github.com/jagtapy/DevOps_Traning.git master
+  183  git commit -am "adding new files pushing it github"
+  184  git push https://github.com/jagtapy/DevOps_Traning.git master
+  185  git push https://github.com/jagtapy/DevOps_Traning.git server_data
+  186  history >> my_history.txt
